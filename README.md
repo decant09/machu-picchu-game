@@ -1,32 +1,137 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Machu Picchu Game
+An adventure based game created for a project submission to Code Institute for the Diploma in Full Stack Software Development
+(E-commerce Applications). The criteria for the submission were primarily that it be created using the Python coding language.
 
-Welcome,
+## Contents
+- [User Experience](#user-experience)
+    - [Initial Discussion](#initial-discussion)
+    - [User Stories](#user-stories)
+        - [First Time Visitor Goals](#first-time-visitor-goals)
+        - [Returning Visitor Goals](#returning-visitor-goals)
+        - [Frequent Visitor Goals](#frequent-visitor-goals)
+    - [Design](#design)
+        - [Colour Scheme](#colour-scheme)
+        - [Typography](#typography)
+        - [Wireframes](#wireframes)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Frameworks](#frameworks)
+- [Testing](#testing)
+    - [PEP8 Linter](#pep8-linter)
+        - [Python](#python)
+    - [Manual](#manual)
+    - [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience-ux-section)
+        - [First Time Visitor Goals](#first-time-visitor-goals-1)
+        - [Returning Visitor Goals](#returning-visitor-goals-1)
+        - [Frequent Visitor Goals](#frequent-visitor-goals-1)
+    - [Bugs](#bugs)
+        - [Known](#known)
+        - [Solved](#solved)
+- [Deployment & Local Development](#deployment--local-development)
+    - [Deployment](#deployment)
+    - [Local Development](#local-development)
+        - [How to Fork](#how-to-fork)
+        - [How to Clone](#how-to-clone)
+- [Credits](#credits)
+    - [Code Used](#code-used)
+    - [Resources](#resources)
+    - [Acknowledgements](#acknowledgements)
+## User Experience
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+### Initial Discussion
+### User Stories
+#### First Time Visitor Goals
+#### Returning Visitor Goals
+#### Frequent Visitor Goals
+### Design
+#### Colour Scheme
+#### Typography
+#### Wireframes
 
-## Reminders
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## Features
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+##  Technologies Used
+### Languages
+- Python
+### Frameworks
+- Git
+    - Used for version control by utilising the Codeanywhere terminals to commit to Git and push to GitHub.
+- GitHub
+    - Used to store the code of the project after being pushed from Git.
+- Heroku
+    - Used to deploy the appliaction
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Testing
+### PEP8 Linter
+#### Python
+- Run code through [PEP8](https://pep8ci.herokuapp.com/)
+### Manual
+- I spellchecked the website and the readme using [Online Spellcheck](https://www.online-spellcheck.com/). I also used
+[Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik), a google chrome extension.
+- I used [Grammarly](https://www.grammarly.com/) to check for grammatical errors.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Testing User Stories from User Experience (UX) Section
+#### First Time Visitor Goals
+ 
+#### Returning Visitor Goals
+  
+#### Frequent Visitor Goals
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+### Bugs
+#### Known
 
-Connect your GitHub repository and deploy as normal.
+#### Solved
 
-## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+## Deployment & Local Development
+### Deployment
+The site was deployed to Heroku and the following steps were followed to do so:
+1. Log in to heroku.com, click "New" and then “Create new app”.
+2. Give the application a name, choose your region, and Click "Create app".
+3. On the next page, within the "Settings" tab, click on the “Reveal Config Vars” button. In the "KEY" input box type PORT and in the "VALUE" input box type 8000. Then click on the "Add" button.
+4. Next click on the “Add buildpack” button. Select “python” and click “Save changes”. Repeat this process to add “nodejs”. It is
+important to add them in this order, with Python on top and NodeJS underneath. If they are the other way around you can click and drag
+to change the order.
+6. When this step is complete select the “Deploy” tab at the top of the page.
+7. In the deployment method section you can connect with GitHub by selecting “GitHub”.
+8. In the "connect to GitHub" section type the [repository](https://github.com/decant09/machu-picchu-game) name in, click “Search”,
+and once located click “Connect”.
+9. You can choose to deploy using either the automatic or manual option.
+10. For automatic deploys select “main” for the “Choose a branch to deploy” option. Click “Enable Automatic Deploys” if desired. This
+can be changed at a later date if needed.
+11. To manually deploy select “main” for the “Choose a branch to deploy” option. Click “Deploy Branch”. A message appears saying
+“Your app was successfully deployed” and a “View” button which can be clicked to view the application in a new page.
 
----
+### Local Development
+The steps below describe how to fork or clone the repository if desired.
+#### How to Fork
+1. Log in to GitHub.
+2. Navigate to the [repository](https://github.com/decant09/machu-picchu-game) for this website.
+3. Click the "Fork" button in the top right corner.
+4. You will be brought to a new page with a short form to be completed.
+5. Upon completing, click on the "Create fork" button and this will create a fork of the repository in your personal account.
 
-Happy coding!
+#### How to Clone
+1. Log in to GitHub.
+2. Navigate to the [repository](https://github.com/decant09/machu-picchu-game) for this website.
+3. Click on the "Code" button and a modal will appear.
+4. Within this modal select the "local" tab.
+5. Within this tab there are "HTTPS", "SSH", or "GitHub CLI" tabs.
+6. Click on the "HTTPS" tab and copy the link shown.
+7. In your development environment open the terminal.
+8. Change the current working directory to the location where you want the cloned directory to be.
+9. Type "git clone" into the terminal, then paste the URL you copied in step 6.
+10. Press **Enter** to create your local clone.
+
+## Credits
+### Code Used
+
+### Resources
+
+### Acknowledgements
+- My Mentor Chris Quinn for continuous helpful feedback.
+- Tutor support at Code Institute for their amazing support.
+- Alan Bushell at Code Institute for guiding the class in our weekly stand-ups.
