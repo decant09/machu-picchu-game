@@ -9,6 +9,7 @@ art = """
 """                              
 username = ""
 
+
 def intro():
     print(art)
     print("Welcome to Machu Picchu, an adventure based game where you hike to the ancient")
@@ -22,14 +23,14 @@ def miguel():
     print("You have just met Miguel your guide. He speaks some English, more than you")
     print("speak Spanish.") 
     print("He seems friendly, knowledgeable and can trace his ancestry to the lost Incan")
-    print(" civilization.\n")
+    print("civilization.\n")
     option = input("Would you like to continue on your adventure with Miguel? Y or N:\n>>> ").lower().strip()
     if option == 'y':
         print(f"Great {username}!\n")
         duration()
     elif option == 'n':
         print(f"Okay {username}. Have a great day!")
-        # use a quit()
+        quit()
     else:
         error()
         miguel()
@@ -37,16 +38,17 @@ def miguel():
 
 def duration():
     print("Miguel explains to you that you can complete the hike in either 3 or 5 days.")
-    option = int(input("How many days would you prfer to spend hiking? 3 or 5:\n>>> "))
-    if option == 3:
+    option = input("How many days would you prfer to spend hiking? 3, 5 or Q to quit:\n>>> ").lower().strip()
+    if option == '3':
         print(f"Wow {username}, you must be up for the challenge! Hiking to an altitude")
         print("of 2430m in 3 days is no joke!\n")
         three_days()
-    elif option == 5:
+    elif option == '5':
         print(f"You're taking a more relaxed approcah {username} with opting for 5 days!")
         print("You are on holiday afterall!\n")
         five_days()
-        # use a quit()
+    elif option == 'q':
+        quit()
     else:
         error()
         duration()
@@ -57,15 +59,17 @@ def three_days():
     print("3 days.")
     print("He suggests a shortcut which involves diving into a river from on top of a")
     print("bridge.")
-    option = input("Do you take Miguel's advice and dive into the river? Y or N:\n>>> ").lower().strip()
+    option = input("Do you take Miguel's advice and dive into the river? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
         print(f"Oh no {username}, that river was treacherous!")
-        # game over function
+        # game over function with do you want to play again
     elif option == 'n':
         print(f"Good choice {username}!")
         print("Turns out that river was pretty shallow and rapid!")
         print("What was Miguel thinking?!\n")
-        # potion()        
+        # potion()
+    elif option == 'q':
+        quit()        
     else:
         error()
         three_days()
@@ -77,15 +81,17 @@ def five_days():
     print("and the mosquitos here are vicious!")
     print("Miguel suggests a natural repellant made by smearing the orange berries")
     print("picked from a nearby native tree")
-    option = input("Would you like to use the berry repellant? Y or N:\n>>> ").lower().strip()
+    option = input("Would you like to use the berry repellant? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
         print(f"Awesome! It works! Turns out the mosquitos don't like those berries!")
-        # new function
+        # faster_group()
     elif option == 'n':
         print(f"Oh no {username}! The mosquitos here carry malaria!")
         print("You get bitten and fall into a frantic fever.")
         print("You need urgent medical attention!")
-        # game over function
+        # game over function with do you want to play again
+    elif option == 'q':
+        quit()
     else:
         error()
         five_days()
