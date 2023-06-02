@@ -24,10 +24,36 @@ def miguel():
         print(f"Great {username}!")
         duration()
     elif option == 'n':
-        print("Bye")
+        print(f"Okay {username}. Have a great day!")
         # use a quit()
     else:
         error()
+
+def duration():
+    print("Miguel explains to you that you can complete the hike in either 3 or 5 days.")
+    option = int(input("How many days would you prfer to spend hiking? 3 or 5:\n>>> "))
+    if option == 3:
+        print(f"Wow {username}, you must be up for the challenge! Hiking to an altitude of 2430m in 3 days is no joke!")
+        three_days()
+    elif option == 5:
+        print(f"You're taking a more relaxed approcah {username} with opting for 5 days! You are on holiday afterall!")
+        five_days()
+        # use a quit()
+    else:
+        error()
+
+
+def three_days():
+    print("potion")
+
+
+
+def five_days():
+    print("berries")
+
+
+def error():
+    print("Please enter a valid option")
 
 
 intro()
@@ -45,7 +71,3 @@ while True:
         print(f"Welcome {username}! Let your journey begin!\n")
         miguel()
         break
-
-
-def error():
-    print("Please enter a valid option")
