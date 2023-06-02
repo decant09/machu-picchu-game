@@ -130,7 +130,8 @@ The steps below describe how to fork or clone the repository if desired.
 ### Code Used
 
 ### Resources
-
+- For error handling referred to Corey Schafer's tutorial on [YouTube](https://www.youtube.com/watch?v=NIWwJbo-9_8&t=72s).
+    - Python Tutorial: Using Try/Except Blocks for Error Handling
 ### Acknowledgements
 - My Mentor Chris Quinn for continuous helpful feedback.
 - Tutor support at Code Institute for their amazing support.
