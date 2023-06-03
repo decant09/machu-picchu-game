@@ -37,7 +37,7 @@ def miguel():
 
 
 def duration():
-    print("Miguel explains to you that you can complete the hike in either 3 or 5 days.")
+    print("Miguel explains to you that you can complete the hike in either 3 or 5 days.\n")
     option = input("How many days would you prfer to spend hiking? 3, 5 or Q to quit:\n>>> ").lower().strip()
     if option == '3':
         print(f"Wow {username}, you must be up for the challenge! Hiking to an altitude")
@@ -58,10 +58,10 @@ def three_days():
     print("The hike is going well but Miguel thinks that you won't make the summit in")
     print("3 days.")
     print("He suggests a shortcut which involves diving into a river from on top of a")
-    print("bridge.")
+    print("bridge.\n")
     option = input("Do you take Miguel's advice and dive into the river? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
-        print(f"Oh no {username}, that river was treacherous!")
+        print(f"Oh no {username}, that river was treacherous!\n")
         # game over function with do you want to play again
     elif option == 'n':
         print(f"Good choice {username}!")
@@ -80,15 +80,15 @@ def five_days():
     print(f"But wait {username}, you've just run out of insect repellant")
     print("and the mosquitos here are vicious!")
     print("Miguel suggests a natural repellant made by smearing the orange berries")
-    print("picked from a nearby native tree")
+    print("picked from a nearby native tree\n")
     option = input("Would you like to use the berry repellant? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
-        print("Awesome! It works! Turns out the mosquitos don't like those berries!")
+        print("Awesome! It works! Turns out the mosquitos don't like those berries!\n")
         waterfall()
     elif option == 'n':
         print(f"Oh no {username}! The mosquitos here carry malaria!")
         print("You get bitten and fall into a frantic fever.")
-        print("You need urgent medical attention!")
+        print("You need urgent medical attention!\n")
         # game_over function with do you want to play again
     elif option == 'q':
         quit()
@@ -104,18 +104,18 @@ def potion():
     print("complete the hike in 3 days! To combat the sickness Miguel")
     print("conjures up a potion made by boiling some leaves he picked from")
     print("a bush. You take the potion but it doesn't appear to be working!")
-    print("Maybe Miguel doesn't realise the severity of your condition?")
+    print("Maybe Miguel doesn't realise the severity of your condition?\n")
     option = input("Do you ask Miguel for some more potion? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
         print("You take another dose of potion despite Miguel's advice. You")
         print("start to become disorientated from the effects of the potion")
-        print("You wander off into the jungle and never reach the summit!")
+        print("You wander off into the jungle and never reach the summit!\n")
         # game_over() function with do you want to play again
     elif option == 'n':
         print(f"Good choice {username}! You wait a little longer and the")
         print("potion starts to work its magic. You start to feel much")
-        print("better and continue on your journey.")
-        # new function
+        print("better and continue on your journey.\n")
+        puzzle()
     elif option == 'q':
         quit()
     else:
@@ -127,20 +127,20 @@ def waterfall():
     print(f"{username} you're almost at the end of your hike and you haven't")
     print("captured and moments on camera to remember the trip by! There's")
     print("wonderful waterfall just up ahead. Seems like the perfect")
-    print("opportunity to take a snap!")
+    print("opportunity to take a snap!\n")
     option = input("Do you ask Miguel to take your photo? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
         print("Miguel willingly obliges and agrees to take your photo. You get")
         print("as close to the waterfall as possible for the perfect snap. But")
         print("you fail to notice that the rocks that you are standing on are")
         print("extremely slippy. You lose your footing, fall into the water, get")
-        print("washed away and you never reach the summit!")
+        print("washed away and you never reach the summit!\n")
         # game_over() function with do you want to play again
     elif option == 'n':
         print(f"You're right {username}, better live in the moment and fully")
         print("experience the hike. You soak up all the glory of the waterfall")
-        print("for a moment before continuing on your journey")
-        # new function
+        print("for a moment before continuing on your journey.\n")
+        puzzle()
     elif option == 'q':
         quit()
     else:
@@ -148,10 +148,26 @@ def waterfall():
         waterfall()
 
 
+def puzzle():
+    print("You are about to reach the summit")
+    answer = "cuzco"
+    guesses_left = 5
+    while guesses_left > 0:
+        guess = input("Your guess: ")
+        while not guess.isalpha():
+            guess = input("Please only enter letters.\nYour guess: ").lower()
+        if guess == answer:
+            print("You win!")
+            break
+        guesses_left -= 1
+        print(f"Attempts remaining: {guesses_left}")
+    else:
+        print("You lose.")
+
 
 def error():
     print("Please enter a valid option")
-
+    
 
 intro()
 
