@@ -67,7 +67,7 @@ def three_days():
         print(f"Good choice {username}!")
         print("Turns out that river was pretty shallow and rapid!")
         print("What was Miguel thinking?!\n")
-        # potion()
+        potion()
     elif option == 'q':
         quit()        
     else:
@@ -83,18 +83,70 @@ def five_days():
     print("picked from a nearby native tree")
     option = input("Would you like to use the berry repellant? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
-        print(f"Awesome! It works! Turns out the mosquitos don't like those berries!")
-        # faster_group()
+        print("Awesome! It works! Turns out the mosquitos don't like those berries!")
+        waterfall()
     elif option == 'n':
         print(f"Oh no {username}! The mosquitos here carry malaria!")
         print("You get bitten and fall into a frantic fever.")
         print("You need urgent medical attention!")
-        # game over function with do you want to play again
+        # game_over function with do you want to play again
     elif option == 'q':
         quit()
     else:
         error()
         five_days()
+
+
+def potion():
+    print("The hike starts to get a little challenging now as you make it")
+    print("closer to the summit. You begin to feel the effects of the")
+    print(f"altitude. {username}, maybe it wasn't such a great idea to")
+    print("complete the hike in 3 days! To combat the sickness Miguel")
+    print("conjures up a potion made by boiling some leaves he picked from")
+    print("a bush. You take the potion but it doesn't appear to be working!")
+    print("Maybe Miguel doesn't realise the severity of your condition?")
+    option = input("Do you ask Miguel for some more potion? Y, N or Q to quit:\n>>> ").lower().strip()
+    if option == 'y':
+        print("You take another dose of potion despite Miguel's advice. You")
+        print("start to become disorientated from the effects of the potion")
+        print("You wander off into the jungle and never reach the summit!")
+        # game_over() function with do you want to play again
+    elif option == 'n':
+        print(f"Good choice {username}! You wait a little longer and the")
+        print("potion starts to work its magic. You start to feel much")
+        print("better and continue on your journey.")
+        # new function
+    elif option == 'q':
+        quit()
+    else:
+        error()
+        potion()
+
+
+def waterfall():
+    print(f"{username} you're almost at the end of your hike and you haven't")
+    print("captured and moments on camera to remember the trip by! There's")
+    print("wonderful waterfall just up ahead. Seems like the perfect")
+    print("opportunity to take a snap!")
+    option = input("Do you ask Miguel to take your photo? Y, N or Q to quit:\n>>> ").lower().strip()
+    if option == 'y':
+        print("Miguel willingly obliges and agrees to take your photo. You get")
+        print("as close to the waterfall as possible for the perfect snap. But")
+        print("you fail to notice that the rocks that you are standing on are")
+        print("extremely slippy. You lose your footing, fall into the water, get")
+        print("washed away and you never reach the summit!")
+        # game_over() function with do you want to play again
+    elif option == 'n':
+        print(f"You're right {username}, better live in the moment and fully")
+        print("experience the hike. You soak up all the glory of the waterfall")
+        print("for a moment before continuing on your journey")
+        # new function
+    elif option == 'q':
+        quit()
+    else:
+        error()
+        waterfall()
+
 
 
 def error():
