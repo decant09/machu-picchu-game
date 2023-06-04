@@ -148,21 +148,51 @@ def waterfall():
         waterfall()
 
 
+# def puzzle():
+#     print("You are about to reach the summit")
+#     answer = "cuzco"
+#     attempts = 5
+#     while attempts > 0:
+#         guess = input("Your guess: ")
+#         while not guess.isalpha():
+#             guess = input("Please only enter letters.\nYour guess: ").lower()
+#         if guess == answer:
+#             print("You win!")
+#             break
+#         attempts -= 1
+#         print(f"Attempts remaining: {attempts}")
+#     else:
+#         print("You lose.")
+
+
 def puzzle():
-    print("You are about to reach the summit")
+    print("You are about to reach the summit. Reach a door. Need to solve.")
+    print("5 characters long, only letters and not a previous guess.")
+    print("Q to quit.")
     answer = "cuzco"
-    guesses_left = 5
-    while guesses_left > 0:
-        guess = input("Your guess: ")
-        while not guess.isalpha():
-            guess = input("Please only enter letters.\nYour guess: ").lower()
-        if guess == answer:
-            print("You win!")
-            break
-        guesses_left -= 1
-        print(f"Attempts remaining: {guesses_left}")
-    else:
-        print("You lose.")
+    attempts = 5
+    words_attempted = []
+    print("_ " * 5)
+    while attempts > 0:
+        guess = input("Your guess: ").lower()
+        if guess.isalpha() and len(guess) == 5 and guess not in words_attempted:
+            if guess == answer:
+                print("You win!")
+                break
+            else: 
+                print("Sorry! Not correct answer.")
+                attempts -= 1
+                print(f"Attempts remaining: {attempts}")
+                words_attempted.append(guess)
+                list = ', '.join(words_attempted)
+                print(f"Words guessed so far: {list}")
+                print("_ " * 5)
+                if attempts == 0:
+                    print(f"Sorry! No attempts remaining. The answer was {answer}")
+        elif guess == "q":
+            quit()
+        else:
+            print("Guess must be 5 characters long, only contain letters and not guessed already.")
 
 
 def error():
