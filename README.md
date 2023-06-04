@@ -132,6 +132,10 @@ The steps below describe how to fork or clone the repository if desired.
 ### Resources
 - For error handling referred to Corey Schafer's tutorial on [YouTube](https://www.youtube.com/watch?v=NIWwJbo-9_8&t=72s).
     - Python Tutorial: Using Try/Except Blocks for Error Handling
+- For help with puzzle function referred to 
+[stackoverflow](https://stackoverflow.com/questions/65054394/guessing-game-with-5-chances-in-python).
+- For help printing a list without brackets referred to
+[javatpoint](https://www.javatpoint.com/how-to-print-a-list-without-brackets-in-python).
 ### Acknowledgements
 - My Mentor Chris Quinn for continuous helpful feedback.
 - Tutor support at Code Institute for their amazing support.
