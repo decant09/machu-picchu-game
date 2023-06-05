@@ -40,6 +40,10 @@ def intro():
     print("Your story begins as you are travelling through South America and decide to")
     print("visit the iconic ruined city of the Incas.")
     print("Your guide Miguel will accompany you on your Incan journey.\n")
+    if username == "":
+        pass
+    else:
+        miguel()
 
 
 def miguel():
