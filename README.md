@@ -82,9 +82,11 @@ An adventure based game created for a project submission to Code Institute for t
 
 ### Bugs
 #### Known
-
 #### Solved
-
+- When the user opted to play the game again, the introduction text would load but the game wouldn't run as expected. This is
+because the username varaible is not an empty string anymore once the game is played once. To address this I introduced a pass
+statement to the intro() method. This allows the program to pass on to the miguel() method of the game if the username variable
+is not an empty string.
 
 ## Deployment & Local Development
 ### Deployment
