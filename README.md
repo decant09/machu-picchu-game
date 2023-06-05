@@ -128,16 +128,24 @@ The steps below describe how to fork or clone the repository if desired.
 
 ## Credits
 ### Code Used
-
+- The code to clear the terminal was obtained from
+[stackoverflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python).
 ### Resources
-- For error handling referred to Corey Schafer's tutorial on [YouTube](https://www.youtube.com/watch?v=NIWwJbo-9_8&t=72s).
-    - Python Tutorial: Using Try/Except Blocks for Error Handling
-- For help with puzzle function referred to 
-[stackoverflow](https://stackoverflow.com/questions/65054394/guessing-game-with-5-chances-in-python).
+- To get an overview of how to code a python text-based adventure game referred to the following tutorials:
+    - Starting to code a Python Text Adventure Game on YouTube by
+    [Jekyll&HydeTutorials](https://www.youtube.com/watch?v=pEfBKamHJew&t=1287s).
+    - Writing a Text-Based Adventure Game in Python on YouTube by
+    [Doug McNally](https://www.youtube.com/watch?v=miuHrP2O7Jw&t=1565s).
+- For help on how to end a program in Python with built in quit() method referred to
+[CodeBerry](https://codeberryschool.com/blog/en/how-to-end-a-program-in-python/).
+- For error handling referred to Corey Schafer's tutorial on [YouTube](https://www.youtube.com/watch?v=NIWwJbo-9_8&t=72s):
+    - Python Tutorial: Using Try/Except Blocks for Error Handling.
+- For help with puzzle function referred to
+[stackoverflow](https://stackoverflow.com/questions/65054394/guessing-game-with-5-chances-in-python) and
+[GeeksforGeeks](https://www.geeksforgeeks.org/python-program-for-word-guessing-game/).
 - For help printing a list without brackets referred to
 [javatpoint](https://www.javatpoint.com/how-to-print-a-list-without-brackets-in-python).
-- The code to clear the terminal was obtained from
-[stackoverflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python)
+- For help with python while loops referred to [Tools QA](https://www.toolsqa.com/python/python-while-loop/).
 ### Acknowledgements
 - My Mentor Chris Quinn for continuous helpful feedback.
 - Tutor support at Code Institute for their amazing support.
