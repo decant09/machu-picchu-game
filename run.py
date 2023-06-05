@@ -1,3 +1,5 @@
+import os
+
 art = """
   ^    ^    ^    ^    ^       
  /M\  /A\  /C\  /H\  /U\      
@@ -6,8 +8,14 @@ art = """
  /P\  /I\  /C\  /C\  /H\  /U\ 
 <___><___><___><___><___><___>
                               
-"""                              
+"""
+
+
 username = ""
+
+
+def clear_terminal():
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def intro():
@@ -26,9 +34,11 @@ def miguel():
     print("civilization.\n")
     option = input("Would you like to continue on your adventure with Miguel? Y or N:\n>>> ").lower().strip()
     if option == 'y':
+        clear_terminal()
         print(f"Great {username}!\n")
         duration()
     elif option == 'n':
+        clear_terminal()
         print(f"Okay {username}. Have a great day!")
         quit()
     else:
@@ -40,10 +50,12 @@ def duration():
     print("Miguel explains to you that you can complete the hike in either 3 or 5 days.\n")
     option = input("How many days would you prfer to spend hiking? 3, 5 or Q to quit:\n>>> ").lower().strip()
     if option == '3':
+        clear_terminal()
         print(f"Wow {username}, you must be up for the challenge! Hiking to an altitude")
         print("of 2430m in 3 days is no joke!\n")
         three_days()
     elif option == '5':
+        clear_terminal()
         print(f"You're taking a more relaxed approcah {username} with opting for 5 days!")
         print("You are on holiday afterall!\n")
         five_days()
@@ -61,9 +73,11 @@ def three_days():
     print("bridge.\n")
     option = input("Do you take Miguel's advice and dive into the river? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
+        clear_terminal()
         print(f"Oh no {username}, that river was treacherous!\n")
         # game over function with do you want to play again
     elif option == 'n':
+        clear_terminal()
         print(f"Good choice {username}!")
         print("Turns out that river was pretty shallow and rapid!")
         print("What was Miguel thinking?!\n")
@@ -83,9 +97,11 @@ def five_days():
     print("picked from a nearby native tree\n")
     option = input("Would you like to use the berry repellant? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
+        clear_terminal()
         print("Awesome! It works! Turns out the mosquitos don't like those berries!\n")
         waterfall()
     elif option == 'n':
+        clear_terminal()
         print(f"Oh no {username}! The mosquitos here carry malaria!")
         print("You get bitten and fall into a frantic fever.")
         print("You need urgent medical attention!\n")
@@ -107,11 +123,13 @@ def potion():
     print("Maybe Miguel doesn't realise the severity of your condition?\n")
     option = input("Do you ask Miguel for some more potion? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
+        clear_terminal()
         print("You take another dose of potion despite Miguel's advice. You")
         print("start to become disorientated from the effects of the potion")
         print("You wander off into the jungle and never reach the summit!\n")
         # game_over() function with do you want to play again
     elif option == 'n':
+        clear_terminal()
         print(f"Good choice {username}! You wait a little longer and the")
         print("potion starts to work its magic. You start to feel much")
         print("better and continue on your journey.\n")
@@ -130,6 +148,7 @@ def waterfall():
     print("opportunity to take a snap!\n")
     option = input("Do you ask Miguel to take your photo? Y, N or Q to quit:\n>>> ").lower().strip()
     if option == 'y':
+        clear_terminal()
         print("Miguel willingly obliges and agrees to take your photo. You get")
         print("as close to the waterfall as possible for the perfect snap. But")
         print("you fail to notice that the rocks that you are standing on are")
@@ -137,6 +156,7 @@ def waterfall():
         print("washed away and you never reach the summit!\n")
         # game_over() function with do you want to play again
     elif option == 'n':
+        clear_terminal()
         print(f"You're right {username}, better live in the moment and fully")
         print("experience the hike. You soak up all the glory of the waterfall")
         print("for a moment before continuing on your journey.\n")
@@ -166,6 +186,7 @@ def waterfall():
 
 
 def puzzle():
+    clear_terminal()
     print("You are about to reach the summit. Reach a door. Need to solve.")
     print("5 characters long, only letters and not a previous guess.")
     print("Q to quit.")
@@ -196,7 +217,7 @@ def puzzle():
 
 
 def error():
-    print("Please enter a valid option")
+    print("Please enter a valid option\n")
     
 
 intro()
@@ -211,6 +232,7 @@ while True:
     except ValueError as e:
         print(f"Invalid Entry: {e}")
     else:
+        clear_terminal()
         print(f"Welcome {username}! Let your journey begin!\n")
         miguel()
         break
