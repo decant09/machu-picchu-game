@@ -1,5 +1,6 @@
 import os
 
+
 art = """
   ^    ^    ^    ^    ^       
  /M\  /A\  /C\  /H\  /U\      
@@ -8,6 +9,20 @@ art = """
  /P\  /I\  /C\  /C\  /H\  /U\ 
 <___><___><___><___><___><___>
                               
+"""
+
+
+win = """
+  ^    ^    ^       ^    ^    ^  
+ /Y\  /O\  /U\     /W\  /I\  /N\ 
+<___><___><___>   <___><___><___>
+"""
+
+
+lose = """
+  ^    ^    ^       ^    ^    ^    ^  
+ /Y\  /O\  /U\     /L\  /O\  /S\  /E\ 
+<___><___><___>   <___><___><___><___>
 """
 
 
@@ -25,7 +40,7 @@ def intro():
     print("Your story begins as you are travelling through South America and decide to")
     print("visit the iconic ruined city of the Incas.")
     print("Your guide Miguel will accompany you on your Incan journey.\n")
-    
+
 
 def miguel():
     print("You have just met Miguel your guide. He speaks some English, more than you")
@@ -92,7 +107,7 @@ def three_days():
             if option == 'y':
                 clear_terminal()
                 print(f"Oh no {username}, that river was treacherous!\n")
-                # game over function with do you want to play again
+                game_over_lose()
             elif option == 'n':
                 clear_terminal()
                 print(f"Good choice {username}!")
@@ -128,7 +143,7 @@ def five_days():
                 print(f"Oh no {username}! The mosquitos here carry malaria!")
                 print("You get bitten and fall into a frantic fever.")
                 print("You need urgent medical attention!\n")
-                # game_over function with do you want to play again
+                game_over_lose()
             elif option == 'q':
                 quit()
             else:
@@ -156,7 +171,7 @@ def potion():
                 print("You take another dose of potion despite Miguel's advice. You")
                 print("start to become disorientated from the effects of the potion")
                 print("You wander off into the jungle and never reach the summit!\n")
-                # game_over() function with do you want to play again
+                game_over_lose()
             elif option == 'n':
                 clear_terminal()
                 print(f"Good choice {username}! You wait a little longer and the")
@@ -189,7 +204,7 @@ def waterfall():
                 print("you fail to notice that the rocks that you are standing on are")
                 print("extremely slippy. You lose your footing, fall into the water, get")
                 print("washed away and you never reach the summit!\n")
-                # game_over() function with do you want to play again
+                game_over_lose()
             elif option == 'n':
                 clear_terminal()
                 print(f"You're right {username}, better live in the moment and fully")
@@ -235,7 +250,8 @@ def puzzle():
         guess = input("Your guess: ").lower()
         if guess.isalpha() and len(guess) == 5 and guess not in words_attempted:
             if guess == answer:
-                print("You win!")
+                clear_terminal()
+                game_over_win()
                 break
             else: 
                 print("Sorry! Not correct answer.")
@@ -246,11 +262,51 @@ def puzzle():
                 print(f"Words guessed so far: {list}")
                 print("_ " * 5)
                 if attempts == 0:
+                    clear_terminal()
                     print(f"Sorry! No attempts remaining. The answer was {answer}")
+                    game_over_lose()
         elif guess == "q":
             quit()
         else:
             print("Guess must be 5 characters long, only contain letters and not guessed already.")
+
+
+def game_over_win():
+    print(win)
+    print("\nCongratulations you made it all the way to the summit!")
+    option = ''
+    while option != 'y' and option != 'n':
+        try:
+            option = input("Play again? Y or N:\n>>> ").lower()
+            if option == 'y':
+                clear_terminal()
+                intro()
+            elif option == 'n':
+                clear_terminal()
+                exit()
+            else:
+                raise ValueError("Please enter Y or N.")
+        except ValueError as e:
+            print(f"Invalid Entry: {e}")
+
+
+def game_over_lose():
+    print(lose)
+    print("\nSorry you didn't reach the summit this time!")
+    option = ''
+    while option != 'y' and option != 'n':
+        try:
+            option = input("Play again? Y or N:\n>>> ").lower()
+            if option == 'y':
+                clear_terminal()
+                intro()
+            elif option == 'n':
+                clear_terminal
+                exit()
+            else:
+                raise ValueError("Please enter Y or N.")
+        except ValueError as e:
+            print(f"Invalid Entry: {e}")
 
 
 def error():
