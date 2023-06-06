@@ -17,7 +17,7 @@ An adventure based game created for a project submission to Code Institute for t
     - [Languages](#languages)
     - [Frameworks](#frameworks)
 - [Testing](#testing)
-    - [PEP8 Linter](#pep8-linter)
+    - [PEP8 Python Validator](#pep8-python-validator)
         - [Python](#python)
     - [Manual](#manual)
     - [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience-ux-section)
@@ -46,8 +46,7 @@ An adventure based game created for a project submission to Code Institute for t
 ### Design
 ### Mind Map
 This is the mind map.  
-![](/docs/mind_map/mind_map.jpg)  
-
+![](/docs/mind_map/mind_map.jpg)
 #### Wireframes
 
 
@@ -66,7 +65,7 @@ This is the mind map.
     - Used to deploy the appliaction.
 - [PEP8](https://pep8ci.herokuapp.com/) used to test the code for errors.
 ## Testing
-### PEP8 Linter  
+### PEP8 Python Validator
 #### Python
 - Result
     - All clear, no errors found  
@@ -90,7 +89,7 @@ This is the mind map.
 because the username varaible is not an empty string anymore once the game is played once. To address this I introduced a pass
 statement to the intro() method. This allows the program to pass on to the miguel() method of the game if the username variable
 is not an empty string.
-- After running the code through the PEP8 linter I rearranged the code to meet the 80 character limit requirements. This involved
+- After running the code through the PEP8 validator I rearranged the code to meet the 80 character limit requirements. This involved
 rearranging an f-string by splitting it over two lines and using a '+' at the end of the first line. However that caused '{username}'
 to be displayed when the game was run and not the input value for username. This was because '{username}' was now on the new
 rearranged second line and not the first line which contained the 'f'. I moved the 'f' from the first to the second line containing
