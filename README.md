@@ -65,12 +65,51 @@ experience for the user.
 To better understand the flow of the game I created a mind map. This shows the direction each level of the game takes upon the user choosing the available option at each step along the way.  
 ![](/docs/mind_map/mind_map.jpg)
 #### ASCII Art
+The art style chosen is called 'pyramid'. It was chosen as it mimics peaks which draws from the fact that game is about hiking to the
+summit of Machu Picchu. 
 - Game banner
+![](/docs/screenshots/ascii_art/game_banner_art.png)
 - You win
+![](/docs/screenshots/ascii_art/game_over_win_art.png)
 - You lose
+![](/docs/screenshots/ascii_art/game_over_lose_art.png)
 ## Features
-
-
+- The game is first viewed with a game title art banner at the top of the terminal. The the words of the game title, "Machu Picchu",
+are embedded in the art. Below this there is an introduction which briefly describes the game. This is followed by an opportunity
+for the user to input their name.  
+![](/docs/screenshots/intro.png)  
+- The name entered must not have any spaces, be at least three characters long, and only contain letters. If the name entered
+does not match this criteria the user is shown an error messgae which details what the requirements are and asking them again to enter their name.  
+![](/docs/screenshots/username_input_error.png)  
+- When the criteria for the name has been met, the name is  then capitalized and stored for use during the game. The terminal is then cleared and
+the next area of the game is revealed where you are introduced to Miguel your tour guide. Here you are given the option of continuing,
+with yes or no options presented. Inputing a valid option clears the terminal to dispay the next part of the game.  
+![](/docs/screenshots/miguel.png)  
+- No ('N') quits the game and a message is shown to the user to confirm this.
+![](/docs/screenshots/miguel_no.png)  
+- Yes ('Y') advances the user to next area of the game where thy are asked if they would like to complete the hike in 3 or 5
+days. To progress the user should input '3' or '5'. The user can also input 'Q' to quit the game.  
+![](/docs/screenshots/miguel_yes.png)  
+- As the user then progresses through the different scenarios of the game they are presented with yes, no or quit options.  
+![](/docs/screenshots/yes_no_quit.png)  
+- If the user inputs an invalid value, they are informed of this and prompted to input a valid value. Both upper and lower case values are accepted.
+![](/docs/screenshots/invalid_entry.png)  
+- If the user navigates the game successfully they arrive at a puzzle section where they also receive a clue.
+![](/docs/screenshots/puzzle.png)  
+- They must enter a password to open a door. They get 5 attempts to enter the correct password. The password entered must be exactly
+5 characters long, can only contain letters, and not be a previous guess. If they enter an invalid value they are notified and
+prompted to enter a valid value. They can also quit the game by entering 'Q'. 
+![](/docs/screenshots/puzzle_invalid.png)  
+- Incorrect guesses are stored and diplayed to the user so that they know what passwords they have already attempted. The number of
+attempts remaining is also displayed.  
+![](/docs/screenshots/puzzle_attempts.png)  
+- Once the correct password is entered the door opens and the user wins the game. A "you win" message is displayed.
+![](/docs/screenshots/you_win.png)  
+- The user can lose the game at different points along the way by choosing an incorrect option or by entering the password incorrectly
+5 times. They are then shown a "you lose" message.  
+![](/docs/screenshots/you_lose.png)  
+- At both the win and lose points the user is given the option of playing again or not. Opting to play again takes the user back to
+the start of the game, but they do not need to enter a name this time around. Opting to not play again quits the game.
 ##  Technologies Used
 ### Languages
 - Python
