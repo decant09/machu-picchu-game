@@ -145,7 +145,7 @@ def five_days():
 
 
 def potion():
-    print("The hike starts to get a little challenging now as you make it. closer to the")
+    print("The hike starts to get a little challenging now as you make it closer to the")
     print(f"summit. You begin to feel the effects of the altitude. {username}, maybe")
     print("it wasn't such a great idea to complete the hike in 3 days! To combat the")
     print("sickness Miguel conjures up a potion made by boiling some leaves he picked from")
@@ -191,7 +191,7 @@ def waterfall():
                 game_over_lose()
             elif option == 'n':
                 clear_terminal()
-                print(f"You're right {username}, better live in the moment and fullyexperience the")
+                print(f"You're right {username}, better live in the moment and fully experience the")
                 print("hike. You soak up all the glory of the waterfall for a moment before continuing")
                 print("on your journey.\n")
                 puzzle()
@@ -209,11 +209,11 @@ def puzzle():
     print("requires a password in order to open it to reach the summit.\n")
     print("The password that is to be entered is 5 characters long, can only contain")
     print("letters, and can not be a previous guess.")
-    print("You wil get 5 attempts to guess the password. Good luck!\n")
+    print("You will get 5 attempts to guess the password. Good luck!\n")
     print("Before you proceed to attempt the password, you notice something written above")
     print("the door... \"The capital of the Incas\". Could this be a clue to the password")
-    print("required? You think to yourself, isn't that place where I started my adventure")
-    print("with Miquel?\"\n")
+    print("required? You think to yourself, isn't that the place where I started my")
+    print("adventure with Miquel?\"\n")
     print("Enter Q to quit if you desire.")
     answer = "cuzco"
     attempts = 5
@@ -244,7 +244,7 @@ def puzzle():
 
 def game_over_win():
     print(win)
-    print(f"\nCongratulations {username}! The door opens and you made it to the summit!\n")
+    print(f"\nCongratulations {username}! The door opens, you made it to the summit!\n")
     option = ''
     while option != 'y' and option != 'n':
         try:
@@ -254,7 +254,7 @@ def game_over_win():
                 intro()
             elif option == 'n':
                 clear_terminal()
-                exit()
+                quit()
             else:
                 raise ValueError("Please enter Y or N.")
         except ValueError as e:
@@ -273,7 +273,7 @@ def game_over_lose():
                 intro()
             elif option == 'n':
                 clear_terminal
-                exit()
+                quit()
             else:
                 raise ValueError("Please enter Y or N.")
         except ValueError as e:
@@ -281,7 +281,7 @@ def game_over_lose():
 
 
 def error():
-    print("Please enter a valid option\n")
+    print("Please enter a valid option.\n")
     
 
 intro()
@@ -289,7 +289,7 @@ intro()
 
 while True:
     try:
-        username = str(input("Please enter your name:\n>>> ")).capitalize().strip()
+        username = input("Please enter your name:\n>>> ").capitalize().strip()
         if len(username) <= 2 or not username.isalpha():
             raise ValueError("Username must not have any spaces, be at least 3 characters long,\nand only contain letters.\n")
             continue
