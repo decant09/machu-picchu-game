@@ -88,7 +88,11 @@ This is the mind map.
 because the username varaible is not an empty string anymore once the game is played once. To address this I introduced a pass
 statement to the intro() method. This allows the program to pass on to the miguel() method of the game if the username variable
 is not an empty string.
-
+- After running the code through the PEP8 linter I rearranged the code to meet the 80 character limit requirements. This involved
+rearranging an f-string by splitting it over two lines and using a '+' at the end of the first line. However that caused '{username}'
+to be displayed when the game was run and not the input value for username. This was because '{username}' was now on the new
+rearranged second line and not the first line which contained the 'f'. I moved the 'f' from the first to the second line containing
+'{username}' and this resolved the issue.
 ## Deployment & Local Development
 ### Deployment
 The site was deployed to Heroku and the following steps were followed to do so:

@@ -115,7 +115,7 @@ def three_days():
             if option == 'y':
                 clear_terminal()
                 print(f"Oh no {username}, the river is treacherous! You get " +
-                      "swept away in the rapids\n")
+                      "swept away in the rapids")
                 print("clambering in vain to grab one of boulders " +
                       "protruding out of the river in order")
                 print("to escape to safety!")
@@ -170,8 +170,8 @@ def five_days():
 def potion():
     print("The hike starts to get a little challenging now as you " +
           "make it closer to the")
-    print(f"summit. You begin to feel the effects of the altitude. " +
-          "{username}, maybe")
+    print("summit. You begin to feel the effects of the altitude. " +
+          f"{username}, maybe")
     print("it wasn't such a great idea to complete the hike in 3 days! " +
           "To combat the")
     print("sickness Miguel conjures up a potion made by boiling some " +
