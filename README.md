@@ -1,6 +1,8 @@
 # Machu Picchu Game
 An adventure based game created for a project submission to Code Institute for the Diploma in Full Stack Software Development
-(E-commerce Applications). The criteria for the submission were primarily that it be created using the Python coding language.
+(E-commerce Applications). The criteria for the submission were primarily that it be created using the Python coding language.  
+
+The application can be viewed on the Code Institute mock terminal on [Heroku](https://decant09-machu-picchu-game.herokuapp.com/).
 
 ## Contents
 - [User Experience](#user-experience)
@@ -11,7 +13,6 @@ An adventure based game created for a project submission to Code Institute for t
         - [Frequent Visitor Goals](#frequent-visitor-goals)
     - [Design](#design)
         - [Mind Map](#mind-map)
-        - [Wireframes](#wireframes)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
     - [Languages](#languages)
@@ -37,19 +38,36 @@ An adventure based game created for a project submission to Code Institute for t
     - [Resources](#resources)
     - [Acknowledgements](#acknowledgements)
 ## User Experience
-
 ### Initial Discussion
+The idea of an adventure based game appealed to me as I have fond memories of playing them. The story content was loosely based on an
+experience I had with some friends travelling through South America.
 ### User Stories
 #### First Time Visitor Goals
+- I want know what the application is about on first viewing.
+- I want clear descriptions as to what my input options are at each point in the game.
+- I want to know if I have entered in the wrong value in the input area.
+- I want to tailor the game to include my name.
+- I want the text to be laid out in such a way that improves readability.
+- I want to know if the game has ended and if I have won or lost.
+- At the puzzle point of the game I want to know what guesses I have made so far and how many attempts I have left.
+- I want to be able to quit the game at any point. 
 #### Returning Visitor Goals
+- I want an option to be able to play the game again when I reach the end.
+- I want variety in the game so that there are different outcomes based on choosing different optins.
 #### Frequent Visitor Goals
+- I want variety in the puzzle games that are presented (future implementation).
 ### Design
-### Mind Map
-This is the mind map.  
+The appearance of the game is simple. The default black background and white text appearance is used. I used appropriate spacing
+in the text to improve readability as the game progesses. Simple ASCII artwork is used for the banner at the beginning of the game
+above the introduction for the win and lose screens. The terminal is also cleared at each junction of the game to improve the
+experience for the user.  
+#### Mind Map
+To better understand the flow of the game I created a mind map. This shows the direction each level of the game takes upon the user choosing the available option at each step along the way.  
 ![](/docs/mind_map/mind_map.jpg)
-#### Wireframes
-
-
+#### ASCII Art
+- Game banner
+- You win
+- You lose
 ## Features
 
 
