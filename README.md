@@ -46,7 +46,7 @@ An adventure based game created for a project submission to Code Institute for t
 ### Design
 ### Mind Map
 This is the mind map.  
-![](/docs/mind_map/mind_map.jpg)
+![](/docs/mind_map/mind_map.jpg)  
 
 #### Wireframes
 
@@ -59,16 +59,18 @@ This is the mind map.
 - Python
 ### Frameworks
 - Git
-    - Used for version control by utilising the Codeanywhere terminals to commit to Git and push to GitHub.
+    - Used for version control by utilising the Codeanywhere terminal to commit to Git and push to GitHub.
 - GitHub
     - Used to store the code of the project after being pushed from Git.
 - Heroku
-    - Used to deploy the appliaction
-
+    - Used to deploy the appliaction.
+- [PEP8](https://pep8ci.herokuapp.com/) used to test the code for errors.
 ## Testing
-### PEP8 Linter
+### PEP8 Linter  
 #### Python
-- Run code through [PEP8](https://pep8ci.herokuapp.com/)
+- Result
+    - All clear, no errors found  
+    ![](/docs/testing/pep8_linter.png)
 ### Manual
 - I spellchecked the website and the readme using [Online Spellcheck](https://www.online-spellcheck.com/). I also used
 [Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik), a google chrome extension.
