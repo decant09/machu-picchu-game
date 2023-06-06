@@ -182,7 +182,7 @@ def potion():
     option = ''
     while option != 'y' and option != 'n' and option != 'q':
         try:
-            option = input("Do you ask Miguel for some more potion?" +
+            option = input("Do you ask Miguel for some more potion? " +
                            "Y, N or Q to quit:\n>>> ").lower().strip()
             if option == 'y':
                 clear_terminal()
