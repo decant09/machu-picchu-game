@@ -10,8 +10,7 @@ An adventure based game created for a project submission to Code Institute for t
         - [Returning Visitor Goals](#returning-visitor-goals)
         - [Frequent Visitor Goals](#frequent-visitor-goals)
     - [Design](#design)
-        - [Colour Scheme](#colour-scheme)
-        - [Typography](#typography)
+        - [Mind Map](#mind-map)
         - [Wireframes](#wireframes)
 - [Features](#features)
 - [Technologies Used](#technologies-used)
@@ -45,8 +44,10 @@ An adventure based game created for a project submission to Code Institute for t
 #### Returning Visitor Goals
 #### Frequent Visitor Goals
 ### Design
-#### Colour Scheme
-#### Typography
+### Mind Map
+This is the mind map.  
+![](/docs/mind_map/mind_map.jpg)
+
 #### Wireframes
 
 
