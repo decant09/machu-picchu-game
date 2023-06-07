@@ -26,6 +26,7 @@ lose = """
 
 
 username = ""
+answer = "cuzco"
 
 
 def clear_terminal():
@@ -79,7 +80,7 @@ def duration():
     option = ''
     while option != '3' and option != '5' and option != 'q':
         try:
-            option = input("How many days would you prfer to spend hiking? " +
+            option = input("How many days would you prefer to spend hiking? " +
                            "3, 5 or Q to quit:\n>>> ").lower().strip()
             if option == '3':
                 clear_terminal()
@@ -261,16 +262,15 @@ def puzzle():
           "to the password")
     print("required? You think to yourself, isn't that the place where I " +
           "started my")
-    print("adventure with Miquel?\"\n")
+    print("adventure with Miguel?\"\n")
     print("Enter Q to quit if you desire.")
-    answer = "cuzco"
     attempts = 5
     words_guessed = []
     while attempts > 0:
         guess = input("\nPlease enter the password:\n>>> ").lower()
         if guess.isalpha() and len(guess) == 5 and guess not in words_guessed:
             if guess == answer:
-                clear_terminal()
+                # clear_terminal() moved to game_over_win()
                 game_over_win()
                 break
             else:
@@ -281,8 +281,9 @@ def puzzle():
                 list = ', '.join(words_guessed)
                 print(f"Passwords attempted so far: {list}")
                 if attempts == 0:
-                    clear_terminal()
-                    print(f"No attempts remaining. The answer was {answer}!")
+                    # clear_terminal()
+                    # print(f"No attempts remaining. The answer was {answer}!")
+                    display_answer()
                     game_over_lose()
         elif guess == "q":
             quit()
@@ -292,6 +293,7 @@ def puzzle():
 
 
 def game_over_win():
+    clear_terminal()
     print(win)
     print(f"\nCongratulations {username}! The door opens, you made " +
           "it to the summit!\n")
@@ -311,6 +313,11 @@ def game_over_win():
             print(f"\nInvalid Entry: {e}")
 
 
+def display_answer():
+    clear_terminal()
+    print(f"No attempts remaining. The answer was {answer}!")
+
+
 def game_over_lose():
     print(lose)
     print(f"\nSorry {username}! You didn't reach the summit this time!\n")
@@ -322,7 +329,8 @@ def game_over_lose():
                 clear_terminal()
                 intro()
             elif option == 'n':
-                clear_terminal
+                clear_terminal()
+                print(f"Thanks for playing {username}!")
                 quit()
             else:
                 raise ValueError("Please enter Y or N.\n")
