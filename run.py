@@ -27,6 +27,7 @@ lose = """
 
 username = ""
 answer = "cuzco"
+continue_playing = True  # new code
 
 
 def clear_terminal():
@@ -42,10 +43,10 @@ def intro():
     print("through South America and decide to visit the iconic " +
           "ruined city of the Incas.")
     print("Your guide Miguel will accompany you on your Incan journey.\n")
-    if username == "":
-        pass
-    else:
-        miguel()
+    # if username == "":
+    #     pass
+    # else:
+    #     miguel()
 
 
 def miguel():
@@ -63,7 +64,8 @@ def miguel():
                 clear_terminal()
                 print(f"Great {username}! Let your adventure with Miguel " +
                       "begin!\n")
-                duration()
+                # duration()
+                return "yes"
             elif option == 'n':
                 clear_terminal()
                 print(f"Okay {username}, no problem. Have a great day!")
@@ -87,13 +89,15 @@ def duration():
                 print(f"Wow {username}, you must be up for the challenge! " +
                       "Hiking to an altitude of 2430m")
                 print("in 3 days is no joke!\n")
-                three_days()
+                # three_days()
+                return "3"
             elif option == '5':
                 clear_terminal()
                 print(f"You're taking a more relaxed approcah {username} " +
                       "with opting for 5 days! You")
                 print("are on holiday afterall!\n")
-                five_days()
+                # five_days()
+                return "5"
             elif option == 'q':
                 quit()
             else:
@@ -120,13 +124,15 @@ def three_days():
                 print("clambering in vain to grab one of boulders " +
                       "protruding out of the river in order")
                 print("to escape to safety!")
-                game_over_lose()
+                # game_over_lose()
+                return "yes and lose"
             elif option == 'n':
                 clear_terminal()
                 print(f"Good choice {username}! Turns out that river was " +
                       "pretty rapid and shallow!")
                 print("What was Miguel thinking?!\n")
-                potion()
+                # potion()
+                return "no and progress"
             elif option == 'q':
                 quit()
             else:
@@ -152,14 +158,16 @@ def five_days():
                 clear_terminal()
                 print(f"Awesome {username}! It works! Turns out the " +
                       "mosquitos don't like those berries!\n")
-                waterfall()
+                # waterfall()
+                return "yes and waterfall"
             elif option == 'n':
                 clear_terminal()
                 print(f"Oh no {username}! The mosquitos here carry malaria! " +
                       "You get bitten and fall")
                 print("into a frantic fever. You need urgent medical " +
                       "attention!\n")
-                game_over_lose()
+                # game_over_lose()
+                return "no and lose"
             elif option == 'q':
                 quit()
             else:
@@ -192,14 +200,16 @@ def potion():
                 print("disorientated from its effects. You wander off into " +
                       "the jungle and never reach")
                 print("the summit!\n")
-                game_over_lose()
+                # game_over_lose()
+                return "yes and lose"
             elif option == 'n':
                 clear_terminal()
                 print(f"Good choice {username}! You wait a little longer " +
                       "and the potion starts to work")
                 print("its magic. You start to feel much better and " +
                       "continue on your journey.\n")
-                puzzle()
+                # puzzle()
+                return "no and progress"
             elif option == 'q':
                 quit()
             else:
@@ -229,7 +239,8 @@ def waterfall():
                       "You lose your footing, fall")
                 print("into the water, get washed away and you never reach " +
                       "the summit!\n")
-                game_over_lose()
+                # game_over_lose()
+                return "yes and lose"
             elif option == 'n':
                 clear_terminal()
                 print(f"You're right {username}, better live in the moment " +
@@ -237,7 +248,8 @@ def waterfall():
                 print("hike. You soak up all the glory of the waterfall for " +
                       "a moment before continuing")
                 print("on your journey.\n")
-                puzzle()
+                # puzzle()
+                return "no and progress"
             elif option == 'q':
                 quit()
             else:
@@ -262,7 +274,7 @@ def puzzle():
           "to the password")
     print("required? You think to yourself, isn't that the place where I " +
           "started my")
-    print("adventure with Miguel?\"\n")
+    print("adventure with Migquel?\"\n")
     print("Enter Q to quit if you desire.")
     attempts = 5
     words_guessed = []
@@ -271,7 +283,8 @@ def puzzle():
         if guess.isalpha() and len(guess) == 5 and guess not in words_guessed:
             if guess == answer:
                 # clear_terminal() moved to game_over_win()
-                game_over_win()
+                # game_over_win()
+                return "win"
                 break
             else:
                 print("Sorry! That's not the correct password!\n")
@@ -283,8 +296,9 @@ def puzzle():
                 if attempts == 0:
                     # clear_terminal()
                     # print(f"No attempts remaining. The answer was {answer}!")
-                    display_answer()
-                    game_over_lose()
+                    return "lose"
+                    # display_answer()
+                    # game_over_lose()
         elif guess == "q":
             quit()
         else:
@@ -303,7 +317,8 @@ def game_over_win():
             option = input("Play again? Y or N:\n>>> ").lower()
             if option == 'y':
                 clear_terminal()
-                intro()
+                # intro()
+                main()
             elif option == 'n':
                 clear_terminal()
                 quit()
@@ -327,7 +342,8 @@ def game_over_lose():
             option = input("Play again? Y or N:\n>>> ").lower()
             if option == 'y':
                 clear_terminal()
-                intro()
+                # intro()
+                main()
             elif option == 'n':
                 clear_terminal()
                 print(f"Thanks for playing {username}!")
@@ -338,21 +354,76 @@ def game_over_lose():
             print(f"\nInvalid Entry: {e}")
 
 
-intro()
+# intro()
 
 
-while True:
-    try:
-        username = input("Please enter your name:\n>>> ").capitalize().strip()
-        if len(username) <= 2 or not username.isalpha():
-            raise ValueError("Username must not have any spaces, be at " +
-                             "least 3 characters long,\nand only contain " +
-                             "letters.\n")
-            continue
-    except ValueError as e:
-        print(f"\nInvalid Entry: {e}")
-    else:
-        clear_terminal()
-        print(f"Welcome {username}!\n")
-        miguel()
-        break
+def username_input():
+    while True:
+        try:
+            global username
+            username = input("Please enter your name" +
+                             ":\n>>> ").capitalize().strip()
+            if len(username) <= 2 or not username.isalpha():
+                raise ValueError("Username must not have any spaces, be at " +
+                                 "least 3 characters long,\nand only " +
+                                 "contain letters.\n")
+                continue
+        except ValueError as e:
+            print(f"\nInvalid Entry: {e}")
+        else:
+            clear_terminal()
+            print(f"Welcome {username}!\n")
+            # miguel()
+            return "valid"
+            break
+
+
+def main():
+    intro()
+    # username_input()
+    username_input_valid = username_input()
+    while continue_playing:
+        if username_input_valid == "valid":
+            # miguel()
+            continue_with_miguel = miguel()
+        if continue_with_miguel == "yes":
+            # duration()
+            duration_length = duration()
+        if duration_length == "3":
+            # three_days()
+            three_days_hike = three_days()
+            if three_days_hike == "yes and lose":
+                game_over_lose()
+            elif three_days_hike == "no and progress":
+                # potion()
+                take_more_potion = potion()
+                if take_more_potion == "no and progress":
+                    # puzzle()
+                    three_puzzle_solved = puzzle()
+                    if three_puzzle_solved == "win":
+                        game_over_win()
+                    elif three_puzzle_solved == "lose":
+                        display_answer()
+                        game_over_lose()
+                elif take_more_potion == "yes and lose":
+                    game_over_lose()
+        elif duration_length == "5":
+            # five_days()
+            five_days_hike = five_days()
+            if five_days_hike == "yes and waterfall":
+                # waterfall()
+                take_snap = waterfall()
+                if take_snap == "yes and lose":
+                    game_over_lose()
+                elif take_snap == "no and progress":
+                    # puzzle()
+                    five_puzzle_solved = puzzle()
+                    if five_puzzle_solved == "win":
+                        game_over_win()
+                    elif five_puzzle_solved == "lose":
+                        display_answer()
+                        game_over_lose()
+            elif five_days_hike == "no and lose":
+                game_over_lose()
+
+main()
