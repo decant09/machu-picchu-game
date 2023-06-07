@@ -111,7 +111,7 @@ attempts remaining is also displayed.
 5 times. They are then shown a "you lose" message.  
 ![](/docs/screenshots/you_lose.png)  
 - At both the win and lose points the user is given the option of playing again or not. Opting to play again takes the user back to
-the start of the game, but they do not need to enter a name this time around. Opting to not play again quits the game.  
+the start of the game. Opting to not play again quits the game.  
 ##  Technologies Used
 ### Languages
 - Python
@@ -128,7 +128,7 @@ the start of the game, but they do not need to enter a name this time around. Op
 #### Python
 - Result
     - All clear, no errors found  
-    ![](/docs/testing/pep8_linter.png)
+    ![](/docs/testing/pep8.png)  
 ### Manual
 - I spellchecked the website and the readme using [Online Spellcheck](https://www.online-spellcheck.com/). I also used
 [Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik), a google chrome extension.
