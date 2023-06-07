@@ -26,15 +26,16 @@ lose = """
 
 
 username = ""
-answer = "cuzco"
+answer = "cuzco"  # answer for password required in puzzle
 
 
+# clears the terminal when called
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
 
 def intro():
-    print(art)
+    print(art)  # prints ASCII banner at top of intro
     print("Welcome to Machu Picchu, an adventure based game where " +
           "you hike to the ancient")
     print("and magical summit of Machu Picchu. Your adventure " +
@@ -59,12 +60,13 @@ def miguel():
                 clear_terminal()
                 print(f"Great {username}! Let your adventure with Miguel " +
                       "begin!\n")
-                return "yes"
+                return "yes"  # return value foru use in main()
             elif option == 'n':
                 clear_terminal()
                 print(f"Okay {username}, no problem. Have a great day!")
-                quit()
+                quit()  # quits the game
             else:
+                # error handling for invalid input
                 raise ValueError("Please enter Y or N.\n")
         except ValueError as e:
             print(f"\nInvalid Entry: {e}")
@@ -260,8 +262,8 @@ def puzzle():
           "started my")
     print("adventure with Migquel?\"\n")
     print("Enter Q to quit if you desire.")
-    attempts = 5
-    words_guessed = []
+    attempts = 5  # number of attmepts allowed
+    words_guessed = []  # empty list to store guess
     while attempts > 0:
         guess = input("\nPlease enter the password:\n>>> ").lower()
         if guess.isalpha() and len(guess) == 5 and guess not in words_guessed:
@@ -269,25 +271,28 @@ def puzzle():
                 return "win"
             else:
                 print("Sorry! That's not the correct password!\n")
-                attempts -= 1
+                attempts -= 1  # reduce attempts by 1
                 print(f"Attempts remaining: {attempts}")
-                words_guessed.append(guess)
+                words_guessed.append(guess)  # store guess in words_guessed
+                # amend how words_guessed display, assign to list variable
                 list = ', '.join(words_guessed)
-                print(f"Passwords attempted so far: {list}")
+                print(f"Passwords attempted so far: {list}")  # print list
                 if attempts == 0:
                     return "lose"
         elif guess == "q":
             quit()
         else:
+            # message to display if invalid input
             print("\nGuess must be 5 characters long, only contain " +
                   "letters and not guessed already.")
 
 
 def game_over_win():
     clear_terminal()
-    print(win)
+    print(win)  # display ASCII you win art
     print(f"\nCongratulations {username}! The door opens, you made " +
           "it to the summit!\n")
+    # present player with option to play again
     option = ''
     while option != 'y' and option != 'n':
         try:
@@ -311,8 +316,9 @@ def display_answer():
 
 
 def game_over_lose():
-    print(lose)
+    print(lose)  # display ASCII you lose art
     print(f"\nSorry {username}! You didn't reach the summit this time!\n")
+    # present player with option to play again
     option = ''
     while option != 'y' and option != 'n':
         try:
@@ -333,9 +339,11 @@ def game_over_lose():
 def username_input():
     while True:
         try:
+            # global username allows use of value in other methods when called
             global username
             username = input("Please enter your name" +
                              ":\n>>> ").capitalize().strip()
+            # criteria for username value
             if len(username) <= 2 or not username.isalpha():
                 raise ValueError("Username must not have any spaces, be at " +
                                  "least 3 characters long,\nand only " +
@@ -348,6 +356,7 @@ def username_input():
             return "valid"
 
 
+# main game method with sequence of methods within it
 def main():
     intro()
     username_input_valid = username_input()
