@@ -58,9 +58,9 @@ experience I had with some friends travelling through South America.
 - I want variety in the puzzle games that are presented (future implementation).
 ### Design
 The appearance of the game is simple. The default black background and white text appearance are used. I used appropriate spacing
-in the text to improve readability as the game progresses. Simple ASCII artwork is used for the banner at the beginning of the game
-above the introduction for the win and lose screens. The terminal is also cleared at each junction of the game to improve the
-experience for the user.  
+in the text to improve readability as the game progresses. Simple ASCII artwork is used for the banner at the beginning of the game,
+above the introduction. Artwork is also used for the win and lose screens. The terminal is cleared at each junction of the game to
+improve the experience for the user.  
 #### Mind Map
 To better understand the flow of the game I created a mind map. This shows the direction each level of the game takes upon the user
 choosing the available option at each step along the way.  
@@ -81,7 +81,7 @@ the user to input their name.
 ![](/docs/screenshots/intro.png)  
 - The name entered must not have any spaces, be at least three characters long, and only contain letters. The user is shown an error
 message if the name entered does not match this criteria. The message details what the requirements are and asks the user to enter
-their name again.  
+their name again if the entry is not valid.  
 ![](/docs/screenshots/username_input_error.png)  
 - When the criteria for the name have been met, the name is  then capitalized and stored for use during the game. The terminal is then
 cleared and the next area of the game is revealed where you are introduced to Miguel your tour guide. Here you are given the option of
@@ -128,7 +128,7 @@ the start of the game. Opting to not play again quits the game.
 - Miro
     - Used to create the mind map.
 - ASCII
-    - Used patorjk.com, a website based text to ASCII art generator, for the ASCII art.
+    - Used patorjk.com, a website-based text to ASCII art generator, for the ASCII art.
 ## Testing
 ### PEP8 Python Validator
 #### Python
@@ -152,7 +152,7 @@ a google chrome extension.
 #### First Time Visitor Goals
 - I want to know what the application is about on first viewing.
     - On the main landing screen, there is a short introduction to what the application is, a game based on hiking to Machu Picchu.  
-    ![](/docs/screenshots/intro_txt.png)  
+    ![](/docs/screenshots/intro_text.png)  
 - I want clear descriptions as to what my input options are at each point in the game.
     - At each point in the game where there is an opportunity to input a value, there is a description as to what the options are.  
     ![](/docs/screenshots/options_1.png)  
@@ -199,10 +199,9 @@ a google chrome extension.
 #### Known
 - No known bugs.
 #### Solved
-- When the user opted to play the game again, the introduction text would load but the game wouldn't run as expected. This is
-because the username variable is not an empty string anymore once the game is played once. To address this I introduced a pass
-statement to the intro() method. This allows the program to pass on to the miguel() method of the game if the username variable
-is not an empty string.
+- When constructing the main() method I was having issues with methods within it being doubly called. This was because I was assigning
+the return value of a method to a variable. I would then call that method. I realised that assigning the return value from a method to
+a variable was in fact also calling that method. I removed the second call and this resolved the issue.
 - After running the code through the PEP8 validator I rearranged the code to meet the 80 character limit requirements. This involved
 rearranging an f-string by splitting it over two lines and using a "+" at the end of the first line. However, that caused "{username}"
 to be displayed when the game was run and not the input value for username. This was because "{username}" was now on the newly
