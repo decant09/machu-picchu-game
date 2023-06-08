@@ -1,5 +1,5 @@
 # Machu Picchu Game
-An adventure based game created for a project submission to Code Institute for the Diploma in Full Stack Software Development
+An adventure based game created as part of a project submission to Code Institute for the Diploma in Full Stack Software Development
 (E-commerce Applications). The criteria for the submission were primarily that it be created using the Python coding language.  
 
 The application can be viewed on the Code Institute mock terminal on [Heroku](https://decant09-machu-picchu-game.herokuapp.com/).
@@ -43,30 +43,31 @@ The idea of an adventure based game appealed to me as I have fond memories of pl
 experience I had with some friends travelling through South America.
 ### User Stories
 #### First Time Visitor Goals
-- I want know what the application is about on first viewing.
+- I want to know what the application is about on first viewing.
 - I want clear descriptions as to what my input options are at each point in the game.
-- I want to know if I have entered in the wrong value in the input area.
+- I want to know if I have entered the wrong value in the input area.
 - I want to tailor the game to include my name.
 - I want the text to be laid out in such a way that improves readability.
 - I want to know if the game has ended and if I have won or lost.
-- At the puzzle point of the game I want to know what guesses I have made so far and how many attempts I have left.
+- At the puzzle point of the game, I want to know what guesses I have made so far and how many attempts I have left.
 - I want to be able to quit the game at any point. 
 #### Returning Visitor Goals
 - I want an option to be able to play the game again when I reach the end.
-- I want variety in the game so that there are different outcomes based on choosing different optins.
+- I want variety in the game so that there are different outcomes based on choosing different options.
 #### Frequent Visitor Goals
 - I want variety in the puzzle games that are presented (future implementation).
 ### Design
-The appearance of the game is simple. The default black background and white text appearance is used. I used appropriate spacing
-in the text to improve readability as the game progesses. Simple ASCII artwork is used for the banner at the beginning of the game
+The appearance of the game is simple. The default black background and white text appearance are used. I used appropriate spacing
+in the text to improve readability as the game progresses. Simple ASCII artwork is used for the banner at the beginning of the game
 above the introduction for the win and lose screens. The terminal is also cleared at each junction of the game to improve the
 experience for the user.  
 #### Mind Map
-To better understand the flow of the game I created a mind map. This shows the direction each level of the game takes upon the user choosing the available option at each step along the way.  
+To better understand the flow of the game I created a mind map. This shows the direction each level of the game takes upon the user
+choosing the available option at each step along the way.  
 ![](/docs/mind_map/mind_map.jpg)
 #### ASCII Art
-The art style chosen is called 'pyramid'. It was chosen as it mimics peaks which draws from the fact that game is about hiking to the
-summit of Machu Picchu. 
+The art style chosen is called "pyramid". It was chosen as it mimics peaks which draws from the fact that the game is about hiking to
+the summit of Machu Picchu. 
 - Game banner
 ![](/docs/screenshots/ascii_art/game_banner_art.png)
 - You win  
@@ -74,22 +75,22 @@ summit of Machu Picchu.
 - You lose  
 ![](/docs/screenshots/ascii_art/game_over_lose_art.png)
 ## Features
-- The game is first viewed with a game title art banner at the top of the terminal. The the words of the game title, "Machu Picchu",
-are embedded in the art. Below this there is an introduction which briefly describes the game. This is followed by an opportunity for
+- The game is first viewed with a game title art banner at the top of the terminal. The words of the game title, "Machu Picchu",
+are embedded in the art. Below this, there is an introduction which briefly describes the game. This is followed by an opportunity for
 the user to input their name.  
 ![](/docs/screenshots/intro.png)  
-- The name entered must not have any spaces, be at least three characters long, and only contain letters. If the name entered does not
-match this criteria the user is shown an error messgae which details what the requirements are and asking them again to enter
-their name.  
+- The name entered must not have any spaces, be at least three characters long, and only contain letters. The user is shown an error
+message if the name entered does not match this criteria. The message details what the requirements are and asks the user to enter
+their name again.  
 ![](/docs/screenshots/username_input_error.png)  
-- When the criteria for the name has been met, the name is  then capitalized and stored for use during the game. The terminal is then
+- When the criteria for the name have been met, the name is  then capitalized and stored for use during the game. The terminal is then
 cleared and the next area of the game is revealed where you are introduced to Miguel your tour guide. Here you are given the option of
-continuing, with yes or no options presented. Inputing a valid option clears the terminal to display the next part of the game.  
+continuing, with yes or no options presented. Inputting a valid option clears the terminal to display the next part of the game.  
 ![](/docs/screenshots/miguel.png)  
-- No ('N') quits the game and a message is shown to the user to confirm this.  
+- No ("N") quits the game and a message is shown to the user to confirm this.  
 ![](/docs/screenshots/miguel_no.png)  
-- Yes ('Y') advances the user to next area of the game where thy are asked if they would like to complete the hike in 3 or 5 days.
-To progress the user should input '3' or '5'. The user can also input 'Q' to quit the game.  
+- Yes ("Y") advances the user to the next area of the game where they are asked if they would like to complete the hike in 3 or 5 days.
+To progress the user should input "3" or "5". The user can also input "Q" to quit the game.  
 ![](/docs/screenshots/miguel_yes.png)  
 - As the user then progresses through the different scenarios of the game they are presented with yes, no or quit options.  
 ![](/docs/screenshots/yes_no_quit.png)  
@@ -100,9 +101,9 @@ are accepted.
 ![](/docs/screenshots/puzzle.png)  
 - They must enter a password to open a door. They get 5 attempts to enter the correct password. The password entered must be exactly
 5 characters long, can only contain letters, and not be a previous guess. If they enter an invalid value they are notified and
-prompted to enter a valid value. They can also quit the game by entering 'Q'.  
+prompted to enter a valid value. They can also quit the game by entering "Q".  
 ![](/docs/screenshots/puzzle_invalid.png)  
-- Incorrect guesses are stored and diplayed to the user so that they know what passwords they have already attempted. The number of
+- Incorrect guesses are stored and displayed to the user so that they know what passwords they have already attempted. The number of
 attempts remaining is also displayed.  
 ![](/docs/screenshots/puzzle_attempts.png)  
 - Once the correct password is entered the door opens and the user wins the game. A "you win" message is displayed.  
@@ -121,12 +122,13 @@ the start of the game. Opting to not play again quits the game.
 - GitHub
     - Used to store the code of the project after being pushed from Git.
 - Heroku
-    - Used to deploy the appliaction.
-- [PEP8](https://pep8ci.herokuapp.com/) used to test the code for errors.
+    - Used to deploy the application.
+- [PEP8](https://pep8ci.herokuapp.com/)
+    - Used to test the code for errors.
 - Miro
     - Used to create the mind map.
 - ASCII
-    - Used patorjk.com, a text to ASCII art generator, for the ASCII art.
+    - Used patorjk.com, a website based text to ASCII art generator, for the ASCII art.
 ## Testing
 ### PEP8 Python Validator
 #### Python
@@ -134,24 +136,31 @@ the start of the game. Opting to not play again quits the game.
     - All clear, no errors found  
     ![](/docs/testing/pep8.png)  
 ### Manual
-- I spellchecked the appliaction and the readme using [Online Spellcheck](https://www.online-spellcheck.com/). I also used
+- All input fields were tested and behave as intended.
+    - The appropriate error message is displayed when an invalid entry is made.
+    - The value input into the name field is capitalized and spaces are removed. This is stored and displayed correctly when used
+    throughout the game.
+    - The options that are available to the user, when input into the respective fields, take the user to the point that is intended
+    by the game. Capitalized input is accepted and converted to lowercase as intended.
+    - Valid puzzle guesses are stored and if incorrect are displayed to the user before they guess again. The attempts remaining value
+    reduces by 1 each time an incorrect guess is made and this value is then displayed to the user correctly.
+- I spellchecked the application and the readme using [Online Spellcheck](https://www.online-spellcheck.com/). I also used
 [Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik),
 a google chrome extension.
 - I used [Grammarly](https://www.grammarly.com/) to check for grammatical errors.
-
 ### Testing User Stories from User Experience (UX) Section
 #### First Time Visitor Goals
-- I want know what the application is about on first viewing.
-    - On the main landing screen there is short introduction to what the application is, a game based on hiking to Machu Picchu.  
+- I want to know what the application is about on first viewing.
+    - On the main landing screen, there is a short introduction to what the application is, a game based on hiking to Machu Picchu.  
     ![](/docs/screenshots/intro_txt.png)  
 - I want clear descriptions as to what my input options are at each point in the game.
-    - At each point in the game where there is an opportunity to input a value there is a description as to what the options are.  
+    - At each point in the game where there is an opportunity to input a value, there is a description as to what the options are.  
     ![](/docs/screenshots/options_1.png)  
     ![](/docs/screenshots/options_2.png)  
     ![](/docs/screenshots/options_3.png)  
     ![](/docs/screenshots/options_4.png)  
     ![](/docs/screenshots/options_5.png)  
-- I want to know if I have entered in the wrong value in the input area.
+- I want to know if I have entered the wrong value in the input area.
     - If an invalid value is input by the user, a message appears explaining what values are accepted as valid. This occurs at each
     point that there is an opportunity to input a value.  
     ![](/docs/screenshots/invalid_entry_msg_1.png)  
@@ -169,12 +178,12 @@ a google chrome extension.
     - You are shown the art displaying "you win" or "you lose" with a short message underneath it.  
     ![](/docs/screenshots/you_win_msg.png)  
     ![](/docs/screenshots/you_lose_msg.png)  
-- At the puzzle point of the game I want to know what guesses I have made so far and how many attempts I have left.
+- At the puzzle point of the game, I want to know what guesses I have made so far and how many attempts I have left.
     - Each time you input a valid guess which is not correct it is stored and the guesses you have made so far are displayed to you
     before you attempt to guess again. The number of attempts left is also displayed.  
     ![](/docs/screenshots/puzzle_attempts_log.png)
 - I want to be able to quit the game at any point.
-    - At each opportunity to input a value you are given the option of entering "Q" to quit the game (with the exception of the name
+    - At each opportunity to input a value, you are given the option of entering "Q" to quit the game (with the exception of the name
     input). This can be seen in the screenshots provided elsewhere within this section.
 #### Returning Visitor Goals
 - I want an option to be able to play the game again when I reach the end.
@@ -191,32 +200,33 @@ a google chrome extension.
 - No known bugs.
 #### Solved
 - When the user opted to play the game again, the introduction text would load but the game wouldn't run as expected. This is
-because the username varaible is not an empty string anymore once the game is played once. To address this I introduced a pass
+because the username variable is not an empty string anymore once the game is played once. To address this I introduced a pass
 statement to the intro() method. This allows the program to pass on to the miguel() method of the game if the username variable
 is not an empty string.
 - After running the code through the PEP8 validator I rearranged the code to meet the 80 character limit requirements. This involved
-rearranging an f-string by splitting it over two lines and using a '+' at the end of the first line. However that caused '{username}'
-to be displayed when the game was run and not the input value for username. This was because '{username}' was now on the new
-rearranged second line and not the first line which contained the 'f'. I moved the 'f' from the first to the second line containing
-'{username}' and this resolved the issue.
+rearranging an f-string by splitting it over two lines and using a "+" at the end of the first line. However, that caused "{username}"
+to be displayed when the game was run and not the input value for username. This was because "{username}" was now on the newly
+rearranged second line and not the first line which contained the "f". I moved the "f" from the first to the second line containing
+"{username}" and this resolved the issue.
 ## Deployment & Local Development
 ### Deployment
 The site was deployed to Heroku and the following steps were followed to do so:
 1. Log in to heroku.com, click "New" and then “Create new app”.
 2. Give the application a name, choose your region, and Click "Create app".
-3. On the next page, within the "Settings" tab, click on the “Reveal Config Vars” button. In the "KEY" input box type PORT and in the "VALUE" input box type 8000. Then click on the "Add" button.
-4. Next click on the “Add buildpack” button. Select “python” and click “Save changes”. Repeat this process to add “nodejs”. It is
+3. On the next page, within the "Settings" tab, click on the “Reveal Config Vars” button. In the "KEY" input box type PORT and the
+"VALUE" input box type 8000. Then click on the "Add" button.
+4. Next, click on the “Add buildpack” button. Select “python” and click “Save changes”. Repeat this process to add “nodejs”. It is
 important to add them in this order, with Python on top and NodeJS underneath. If they are the other way around you can click and drag
 to change the order.
 6. When this step is complete select the “Deploy” tab at the top of the page.
-7. In the deployment method section you can connect with GitHub by selecting “GitHub”.
+7. In the deployment method section, you can connect with GitHub by selecting “GitHub”.
 8. In the "connect to GitHub" section type the [repository](https://github.com/decant09/machu-picchu-game) name in, click “Search”,
 and once located click “Connect”.
 9. You can choose to deploy using either the automatic or manual option.
 10. For automatic deploys select “main” for the “Choose a branch to deploy” option. Click “Enable Automatic Deploys” if desired. This
 can be changed at a later date if needed.
 11. To manually deploy select “main” for the “Choose a branch to deploy” option. Click “Deploy Branch”. A message appears saying
-“Your app was successfully deployed” and a “View” button which can be clicked to view the application in a new page.
+“Your app was successfully deployed” and a “View” button can be clicked to view the application on a new page.
 
 ### Local Development
 The steps below describe how to fork or clone the repository if desired.
@@ -232,7 +242,7 @@ The steps below describe how to fork or clone the repository if desired.
 2. Navigate to the [repository](https://github.com/decant09/machu-picchu-game) for this website.
 3. Click on the "Code" button and a modal will appear.
 4. Within this modal select the "local" tab.
-5. Within this tab there are "HTTPS", "SSH", or "GitHub CLI" tabs.
+5. Within this tab, there are "HTTPS", "SSH", or "GitHub CLI" tabs.
 6. Click on the "HTTPS" tab and copy the link shown.
 7. In your development environment open the terminal.
 8. Change the current working directory to the location where you want the cloned directory to be.
@@ -244,23 +254,23 @@ The steps below describe how to fork or clone the repository if desired.
 - The code to clear the terminal was obtained from
 [stackoverflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python).
 - The ASCII art code used was generated on
-[https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20](patorjk.com).
+[patorjk.com](https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20).
 ### Resources
-- To get an overview of how to code a python text-based adventure game referred to the following tutorials:
+- To get an overview of how to code a Python text-based adventure game referred to the following tutorials:
     - Starting to code a Python Text Adventure Game on YouTube by
     [Jekyll&HydeTutorials](https://www.youtube.com/watch?v=pEfBKamHJew&t=1287s).
     - Writing a Text-Based Adventure Game in Python on YouTube by
     [Doug McNally](https://www.youtube.com/watch?v=miuHrP2O7Jw&t=1565s).
-- For help on how to end a program in Python with built in quit() method referred to
+- For help on how to end a program in Python with a built-in quit() method referred to
 [CodeBerry](https://codeberryschool.com/blog/en/how-to-end-a-program-in-python/).
 - For error handling referred to Corey Schafer's tutorial on [YouTube](https://www.youtube.com/watch?v=NIWwJbo-9_8&t=72s):
     - Python Tutorial: Using Try/Except Blocks for Error Handling.
-- For help with puzzle function referred to
+- For help with the puzzle method referred to
 [stackoverflow](https://stackoverflow.com/questions/65054394/guessing-game-with-5-chances-in-python) and
 [GeeksforGeeks](https://www.geeksforgeeks.org/python-program-for-word-guessing-game/).
 - For help printing a list without brackets referred to
 [javatpoint](https://www.javatpoint.com/how-to-print-a-list-without-brackets-in-python).
-- For help with python while loops referred to [Tools QA](https://www.toolsqa.com/python/python-while-loop/).
+- For help with Python while loops referred to [Tools QA](https://www.toolsqa.com/python/python-while-loop/).
 ### Acknowledgements
 - My Mentor Chris Quinn for continuous helpful feedback.
 - Tutor support at Code Institute for their amazing support.
