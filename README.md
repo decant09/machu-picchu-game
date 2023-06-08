@@ -123,6 +123,10 @@ the start of the game. Opting to not play again quits the game.
 - Heroku
     - Used to deploy the appliaction.
 - [PEP8](https://pep8ci.herokuapp.com/) used to test the code for errors.
+- Miro
+    - Used to create the mind map.
+- ASCII
+    - Used patorjk.com, a text to ASCII art generator, for the ASCII art.
 ## Testing
 ### PEP8 Python Validator
 #### Python
@@ -130,19 +134,61 @@ the start of the game. Opting to not play again quits the game.
     - All clear, no errors found  
     ![](/docs/testing/pep8.png)  
 ### Manual
-- I spellchecked the website and the readme using [Online Spellcheck](https://www.online-spellcheck.com/). I also used
-[Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik), a google chrome extension.
+- I spellchecked the appliaction and the readme using [Online Spellcheck](https://www.online-spellcheck.com/). I also used
+[Webpage Spell-Check](https://chrome.google.com/webstore/detail/webpage-spell-check/mgdhaoimpabdhmacaclbbjddhngchjik),
+a google chrome extension.
 - I used [Grammarly](https://www.grammarly.com/) to check for grammatical errors.
 
 ### Testing User Stories from User Experience (UX) Section
 #### First Time Visitor Goals
- 
+- I want know what the application is about on first viewing.
+    - On the main landing screen there is short introduction to what the application is, a game based on hiking to Machu Picchu.  
+    ![](/docs/screenshots/intro_txt.png)  
+- I want clear descriptions as to what my input options are at each point in the game.
+    - At each point in the game where there is an opportunity to input a value there is a description as to what the options are.  
+    ![](/docs/screenshots/options_1.png)  
+    ![](/docs/screenshots/options_2.png)  
+    ![](/docs/screenshots/options_3.png)  
+    ![](/docs/screenshots/options_4.png)  
+    ![](/docs/screenshots/options_5.png)  
+- I want to know if I have entered in the wrong value in the input area.
+    - If an invalid value is input by the user, a message appears explaining what values are accepted as valid. This occurs at each
+    point that there is an opportunity to input a value.  
+    ![](/docs/screenshots/invalid_entry_msg_1.png)  
+    ![](/docs/screenshots/invalid_entry_msg_2.png)  
+    ![](/docs/screenshots/invalid_entry_msg_3.png)  
+- I want to tailor the game to include my name.
+    - There is an opportunity at the beginning of the game to enter your name.  
+    ![](/docs/screenshots/name.png)  
+    - This is stored and used at various points along the game to personalise the game experience.  
+    ![](/docs/screenshots/name_personalised.png)  
+- I want the text to be laid out in such a way that improves readability.
+    - The screen is cleared at frequent points in the game. There is sufficient spacing between lines of text and messages that appear
+    throughout the game as seen in the screenshots provided elsewhere within this section.
+- I want to know if the game has ended and if I have won or lost.
+    - You are shown the art displaying "you win" or "you lose" with a short message underneath it.  
+    ![](/docs/screenshots/you_win_msg.png)  
+    ![](/docs/screenshots/you_lose_msg.png)  
+- At the puzzle point of the game I want to know what guesses I have made so far and how many attempts I have left.
+    - Each time you input a valid guess which is not correct it is stored and the guesses you have made so far are displayed to you
+    before you attempt to guess again. The number of attempts left is also displayed.  
+    ![](/docs/screenshots/puzzle_attempts_log.png)
+- I want to be able to quit the game at any point.
+    - At each opportunity to input a value you are given the option of entering "Q" to quit the game (with the exception of the name
+    input). This can be seen in the screenshots provided elsewhere within this section.
 #### Returning Visitor Goals
-  
+- I want an option to be able to play the game again when I reach the end.
+    - There is an option to play again when the user reaches the end of the game.  
+    ![](/docs/screenshots/options_5.png)  
+- I want variety in the game so that there are different outcomes based on choosing different options.
+    - Each time a user is presented with a question in the game, the answer chosen by the user results in a different outcome.
 #### Frequent Visitor Goals
-
+- I want variety in the puzzle games that are presented (future implementation).
+    - This is a future implementation whereby I would like to add a little more complexity to the game. I would add more puzzles,
+    which would aim to encourage the user to visit the application frequently.  
 ### Bugs
 #### Known
+- No known bugs.
 #### Solved
 - When the user opted to play the game again, the introduction text would load but the game wouldn't run as expected. This is
 because the username varaible is not an empty string anymore once the game is played once. To address this I introduced a pass
@@ -197,6 +243,8 @@ The steps below describe how to fork or clone the repository if desired.
 ### Code Used
 - The code to clear the terminal was obtained from
 [stackoverflow](https://stackoverflow.com/questions/2084508/clear-terminal-in-python).
+- The ASCII art code used was generated on
+[https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20](patorjk.com).
 ### Resources
 - To get an overview of how to code a python text-based adventure game referred to the following tutorials:
     - Starting to code a Python Text Adventure Game on YouTube by
